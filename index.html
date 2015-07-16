@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body ng-app="myApp">
+
+
+
+<div ng-controller="myCtrl">
+{{ firstName + " " + lastName }}
+</div>
+
+<script>
+var app = angular.module("myApp", []);
+angular.element(document).ready(function () {
+                console.log('MANUALLY START - LoanModule');
+                angular.bootstrap(document, ['myApp']);
+            });
+
+
+app.controller("myCtrl", function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
+</script>
+
+</body>
+</html>
+
